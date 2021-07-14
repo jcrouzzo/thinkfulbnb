@@ -1,6 +1,8 @@
 /* -------  General Styles ------- */
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Lato", sans-serif;
 }
 
@@ -31,8 +33,10 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  display: flex;
+  width: 100%;
 }
+
 
 /* ---  Groups & Items --- */
 
@@ -41,29 +45,63 @@ main img {
   flex-direction: column;
 }
 
+.group-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .item {
+  display: flex;
   flex: 1;
   margin: 10px;
 }
 
 .item-double {
+  display: flex;
   flex: 2;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px;
 }
 
+.item-column{
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 30px; 
+}
+
+.item-row{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 30px; 
+}
 /* -------  Navigation ------- */
 
 header {
+  display: flex;
+  flex-direction: column;
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
-  text-align: center;
+  padding: 20px 20px 20px 20px;
+  justify-content: center;
 }
 
 .logo {
+  display: flex;
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-
+header nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 header nav ul li {
   list-style-type: none;
 }
@@ -104,6 +142,12 @@ form button {
   width: 100%;
 }
 
+form div{
+  display: flex;
+  /* ---flex row in media selector  then add last child to have search button appear below?--- */
+  justify-content: space-evenly;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +161,51 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 800px){
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    flex-direction: row;
+  }
+  header h1{
+    margin: 14px 10px;
+    padding-top: 0;
+    font-size: 48px;
+  }
+  header nav{
+    margin-top: 16px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  header nav ul li a{
+    font-family: monserrat;
+  }
+  header nav ul li a:hover{
+    color: #bdbdbd;
+  }
+  form{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top : 5px;
+    padding-bottom: 5px;
+  }
+
+  form div{
+    display:flex;
+    flex-direction: column;
+    margin-top: 5px;
+    flex-shrink:1;
+    flex-wrap: wrap;
+  
+  }
+
+  form div button{
+    margin-top: 0;
+  }
+  img{
+    padding: 10px;
+  }
+}

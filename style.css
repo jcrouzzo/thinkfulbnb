@@ -1,211 +1,178 @@
 /* -------  General Styles ------- */
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: "Lato", sans-serif;
-}
-
-h2 {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 0 10px 10px 10px;
-  text-align: center;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-p {
-  line-height: 1.5em;
-  margin: 0;
-}
-
-section {
-  padding: 20px;
-}
-
-section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
-}
-
-main img {
-  display: flex;
-  width: 100%;
-}
-
-
-/* ---  Groups & Items --- */
-
-.group {
-  display: flex;
-  flex-direction: column;
-}
-
-.group-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.item {
-  display: flex;
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  display: flex;
-  flex: 2;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 30px;
-}
-
-.item-column{
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 30px; 
-}
-
-.item-row{
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 30px; 
-}
-/* -------  Navigation ------- */
-
-header {
-  display: flex;
-  flex-direction: column;
-  background-color: #ff385c;
-  padding: 20px 20px 20px 20px;
-  justify-content: center;
-}
-
-.logo {
-  display: flex;
-  font-family: "Pangolin", cursive;
-  font-size: 72px;
-  color: #fff;
-  justify-content: center;
-  justify-content: space-evenly;
-}
-header nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-header nav ul li {
-  list-style-type: none;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 20px 0 0;
-}
-
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
-/* -------  Search Form ------- */
-form {
-  border: 2px solid #ff385c;
-  padding: 10px;
-}
-
-form label {
-  font-weight: bold;
-}
-
-form select,
-form input {
-  margin-bottom: 20px;
-  width: 180px;
-}
-
-form button {
-  background-color: #ff385c;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  padding: 15px;
-  width: 100%;
-}
-
-form div{
-  display: flex;
-  /* ---flex row in media selector  then add last child to have search button appear below?--- */
-  justify-content: space-evenly;
-}
-
-/* -------  Footer ------- */
-
-footer {
-  background-color: #ff385c;
-}
-
-footer p {
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-/* -------  Media Query ------- */
-
-@media all and (min-width: 800px){
-  header{
+    font-family: "Lato", sans-serif;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  p {
+    line-height: 1.5em;
+    margin: 0;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  section.alternate-background {
+    background-color: #00a699;
+    color: #fff;
+  }
+  
+  main img {
+    width: 100%;
+  }
+  
+  /* ---  Groups & Items --- */
+  
+  .group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .item-double {
+    flex: 2;
+  }
+  
+  /* -------  Navigation ------- */
+  
+  header {
+    background-color: #ff385c;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    font-family: "Pangolin", cursive;
+    font-size: 56px;
+    color: #fff;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul li {
+    list-style-type: none;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px 0 0;
+  }
+  
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+  
+  /* -------  Search Form ------- */
+  form {
+    border: 2px solid #ff385c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form select,
+  form input {
+    margin-bottom: 20px;
+    width: 180px;
+  }
+  
+  form button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+  }
+  
+  form div {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
-    flex-direction: row;
   }
-  header h1{
-    margin: 14px 10px;
-    padding-top: 0;
-    font-size: 48px;
-  }
-  header nav{
-    margin-top: 16px;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  header nav ul li a{
-    font-family: monserrat;
-  }
-  header nav ul li a:hover{
-    color: #bdbdbd;
-  }
-  form{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top : 5px;
-    padding-bottom: 5px;
-  }
-
-  form div{
-    display:flex;
-    flex-direction: column;
-    margin-top: 5px;
-    flex-shrink:1;
-    flex-wrap: wrap;
   
+  /* -------  Footer ------- */
+  
+  footer {
+    background-color: #ff385c;
   }
+  
+  footer p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* -------  Media Query ------- */
+  @media all and (min-width: 480px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+  
+    header nav {
+      margin-top: 8px;
+      align-self: center;
+    }
+  
+    .logo {
+      font-size: 48px;
+    }
+  
+    .item {
+      flex-direction: column;
+    }
+  
+    #about .group div p {
+      margin-top: 50px;
+    }
+  
+    #host h2 {
+      margin-top: 100px;
+    }
+  
+    form {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
 
-  form div button{
-    margin-top: 0;
+    form label{
+        padding: 10px 10px 0 0;
+      }
+  
+    .group {
+      flex-direction: row;
+    }
   }
-  img{
-    padding: 10px;
-  }
-}

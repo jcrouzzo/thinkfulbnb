@@ -110,8 +110,9 @@ body {
     background-color: #ff385c;
     border: none;
     color: #fff;
-    font-size: 24px;
-    padding: 15px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
     width: 100%;
   }
   
@@ -133,6 +134,10 @@ body {
     padding: 20px;
   }
   
+  img{
+    size: 100%;
+  }
+
   /* -------  Media Query ------- */
   @media all and (min-width: 480px) {
     header {
@@ -158,10 +163,6 @@ body {
       justify-content: center;
       text-align: center;
       align-items: center;
-    }
-  
-    #host h2 {
-      margin-top: 100px;
     }
   
     form, form div{
